@@ -57,7 +57,6 @@ public class Main {
         if( s.charAt(0) == 'i' || s.charAt(1) == 'i')
             s = s.substring(5);
         s = removeParanthesis(s);
-        System.out.println("isimsiz parantezsiz ---" +s);
         String[] arr = s.split( " ");
         for( int i = 0; i < arr.length ; i++){
             String el = arr[i];
