@@ -54,16 +54,25 @@ public class Main {
 
     public static void printWords( String s){
         s = s.substring( 2);
-        if( s.charAt(0) == 'i' || s.charAt(1) == 'i')
-            s = s.substring(5);
+
         s = removeParanthesis(s);
+        if( s.indexOf( 34) != -1)
+            s = s.substring(0,s.indexOf( 34) -2);
+
+        //System.out.println("isimsiz parantezsiz ---" +s);
         String[] arr = s.split( " ");
-        for( int i = 0; i < arr.length ; i++){
+
+        if ( arr.length == 3)
+            System.out.println(arr[1]);
+        for( int i = 1; i < arr.length ; i++){
             String el = arr[i];
 
-            if(el.indexOf(',') != -1 && arr[ i - 1].indexOf(',') != -1){
+            if(el.indexOf(',') != -1 && (arr[ i - 1].indexOf(',') != -1 || i == 2 )){
                 System.out.println(el);
             }
+
+            if ( arr[ i - 1].indexOf( 44) != -1 && i == arr.length -1)
+                System.out.println( el);
         }
 
     }
