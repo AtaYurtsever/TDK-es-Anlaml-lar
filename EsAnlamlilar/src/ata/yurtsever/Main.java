@@ -48,7 +48,7 @@ public class Main {
             printWords( cell.asText());
         }
         catch ( Exception e) {
-            //this is a bad code
+            e.printStackTrace();
         }
     }
 
